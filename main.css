@@ -1,0 +1,25 @@
+.header {
+    background-color: black;
+    height: 80px;
+}
+
+section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 90vw;
+}
+
+.pad {
+    padding-left : 3em; 
+    padding-right: 3em;
+}
+
+/* .splide {
+  padding-top: 1em;
+  padding-left: 10vw;
+  padding-right: 10vw;
+} */
