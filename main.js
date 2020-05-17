@@ -1,4 +1,3 @@
-
 const images = [ 
     "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2255&q=80",
     "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
@@ -14,47 +13,31 @@ const images = [
     "https://images.unsplash.com/photo-1535224206242-487f7090b5bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80",
     "https://images.unsplash.com/46/iYvDeqVGRbebiQv2PIJi_DSC_8407.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2253&q=80"
 
-]
+];
 
 
-// const container = document.getElementById('image_container');
-const containerTwo = document.getElementById('image_containertwo')
 
+const container = document.getElementById('image_container_one');
 
-// const sliderONe = () => {
-//     images.forEach((image,index, collection) => {
-
-//         container.innerHTML += `
-//         <li class="splide__slide">
-//             <div id="${index}" class="splide__slide__container">
-//                 <img src="${image}" alt="">
-//             </div>
-//             one love 
-//         </li>
-//         `
-//     })
-    
-// }
-
-// sliderONe()
-
-const sliderTwo = () => {
-    images.forEach((image,index, collection) => {
-
-        image_containertwo.innerHTML += `
+const buildSlider = (id) => {
+    console.log("slider one function");
+    images.forEach((image, index , allPics ) => {
+        document.getElementById(id).innerHTML += `
         <li class="splide__slide">
-            <div id="${index}" class="splide__slide__container">
-                <img src="${image}" alt="">
-            </div>
-            one love 
-        </li>
+             <div class="splide__slide__container">
+                 <img id="${index}" src="${image}">
+             </div>
+             <p class="image_text">Lorem Ipsum Dolor Sit Amet</p>
+         </li>
         `
     })
-    
 }
 
-sliderTwo()
-var splide = new Splide( '.splide', {
+buildSlider('image_container_one');
+buildSlider('image_container_two')
+
+
+var splide = new Splide( '#splide1', {
 	type      : 'loop',
     perPage   : 3,
     height    : '15rem',
@@ -73,3 +56,20 @@ splide.on( 'moved', function () {
 } );
 
 splide.mount();
+
+var splide2 = new Splide( '#splide2', {
+	type      : 'loop',
+    perPage   : 3,
+    height    : '15rem',
+    gap: 10,
+	cover     : true,
+	breakpoints: {
+		740: {
+			perPage: 1,
+		},
+    },
+    
+} )
+
+splide2.mount();
+

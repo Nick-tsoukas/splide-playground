@@ -8,24 +8,56 @@
 
 </head>
 <body>
-   <header class="header"></header>
+   <header class="header">
+       <nav>
+           <ul class="nav">
+               <li>Home</li>
+               <li>About</li>
+               <li>Gallery</li>
+               <li>Contact</li>
+           </ul>
+       </nav>
+   </header>
 
     <section>
-        <div class="splide">
+
+        <div id="splide1" class="splide">
             <div class="splide_box">
                 <div class="splide__track">
-                    <ul class="splide__list" id="image_containertwo"></ul>
+                    <ul class="splide__list" id="image_container_one"></ul>
                 </div>
             </div>
-            </div>
+         </div>
+
     </section>
 
-    <section class="intro_text">
+    <section>
+
+        <div id="splide2" class="splide">
+            <div class="splide_box">
+                <div class="splide__track">
+                    <ul class="splide__list" id="image_container_two">
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+
+    </section>
+
+    <!-- <section class="intro_text">
+
         <h1>Splide js</h1>
         <p>This is just some test text to get the placement right</p>
-    </section>
+        <p>This is some some dummy text to fill out the bone layout with the splide.js module</p>
+
+    </section> -->
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.2.7/dist/js/splide.min.js" integrity="sha256-8+4O/Qrc3rm3xZlC9HqgF+JMpOX2ciLyhkf9xvvBTKI=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+
     </body>
+
 </html>
